@@ -1,0 +1,53 @@
+{
+  "test_time": "2025-03-02T03:53:48.410013",
+  "incident_id": "TEST-b7b7d6a2-908e-4710-8e16-a6db414146f6",
+  "incident": {
+    "id": "00bb5195-214f-4daf-b09c-53e588f3b4db",
+    "incident_id": "TEST-b7b7d6a2-908e-4710-8e16-a6db414146f6",
+    "timestamp": "2025-03-01T22:23:48.624488+00:00",
+    "status": "new",
+    "risk_level": "unknown",
+    "source": "test",
+    "raw_data": {
+      "email": "\nFrom: suspicious@example.com\nTo: victim@company.com\nSubject: Urgent: Account Security Update Required\n\nDear User,\n\nYour account security needs immediate attention. Click the link below to verify:\nhttp://malicious-site.com/verify\n\nBest regards,\nSecurity Team\n            "
+    },
+    "metadata": {
+      "source_ip": "192.168.1.100",
+      "spam_score": 0.8,
+      "received_time": "2025-03-02T03:53:46.450768"
+    },
+    "created_at": "2025-03-01T22:23:48.624488+00:00",
+    "updated_at": "2025-03-01T22:23:48.624488+00:00"
+  },
+  "analysis": {
+    "incident_id": "TEST-b7b7d6a2-908e-4710-8e16-a6db414146f6",
+    "text_analysis": {
+      "sentiment": "negative",
+      "urgency_indicators": true,
+      "suspicious_patterns": [
+        "click_link",
+        "urgent_action"
+      ]
+    },
+    "url_analysis": {
+      "urls_found": [
+        "http://malicious-site.com/verify"
+      ],
+      "malicious_score": 0.9
+    }
+  },
+  "feedback": {
+    "incident_id": "TEST-b7b7d6a2-908e-4710-8e16-a6db414146f6",
+    "feedback_type": "automated",
+    "is_phishing": true,
+    "confidence": 0.95,
+    "features": {
+      "has_urgent_language": true,
+      "has_suspicious_links": true
+    },
+    "metadata": {
+      "source": "test_workflow",
+      "timestamp": "2025-03-02T03:53:47.882317"
+    }
+  }
+}

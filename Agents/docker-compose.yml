@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:latest
+    container_name: phishing_detection_redis
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass rZOZdmzy2aGql-mb7MgtPkkKoFhZ_J4vay4UGiy-Lvc
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+    name: phishing_detection_redis_data 

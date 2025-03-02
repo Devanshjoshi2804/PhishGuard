@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white;
+  }
+  
+  .btn-danger {
+    @apply bg-danger-500 hover:bg-danger-600 text-white;
+  }
+  
+  .btn-success {
+    @apply bg-success-500 hover:bg-success-600 text-white;
+  }
+  
+  .btn-warning {
+    @apply bg-warning-500 hover:bg-warning-600 text-white;
+  }
+  
+  .input {
+    @apply px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md 
+           focus:outline-none focus:ring-2 focus:ring-primary-500 dark:bg-gray-800;
+  }
+  
+  .badge {
+    @apply px-2 py-1 text-xs font-medium rounded-full;
+  }
+  
+  .badge-danger {
+    @apply bg-danger-100 text-danger-800 dark:bg-danger-900 dark:text-danger-100;
+  }
+  
+  .badge-success {
+    @apply bg-success-100 text-success-800 dark:bg-success-900 dark:text-success-100;
+  }
+  
+  .badge-warning {
+    @apply bg-warning-100 text-warning-800 dark:bg-warning-900 dark:text-warning-100;
+  }
+  
+  .badge-info {
+    @apply bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-100;
+  }
+}
+
+/* Custom animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(14, 165, 233, 0.8);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Cybersecurity-themed styles */
+.cyber-grid {
+  background-image: linear-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(14, 165, 233, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.cyber-text {
+  text-shadow: 0 0 5px rgba(14, 165, 233, 0.5);
+}
+
+.cyber-border {
+  border: 1px solid rgba(14, 165, 233, 0.5);
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
+} 
